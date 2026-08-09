@@ -14,14 +14,14 @@ let package = Package(
         )
     ],
     targets: [
-        .binaryTarget(
-            name: "llama",
-            path: "Frameworks/llama.xcframework"
-        ),
-        .target(
-            name: "LlamaSwift",
-            dependencies: ["llama"],
-            path: "Sources/LlamaSwift"
-        )
+       .binaryTarget(
+    name: "llama-cpp",
+    path: "Frameworks/llama.xcframework"
+),
+.target(
+    name: "LlamaSwift",
+    dependencies: ["llama-cpp"],
+    path: "Sources/LlamaSwift"
+)
     ]
 )
