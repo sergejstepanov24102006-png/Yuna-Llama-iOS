@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "LlamaSwift",
-            targets: ["LlamaSwift"]
+            targets: ["LlamaSwift", "llama-cpp"]
         )
     ],
     targets: [
