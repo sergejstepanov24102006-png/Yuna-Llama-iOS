@@ -1,0 +1,27 @@
+// swift-tools-version: 6.0
+
+import PackageDescription
+
+let package = Package(
+    name: "YunaLlamaIOS",
+    platforms: [
+        .iOS(.v16)
+    ],
+    products: [
+        .library(
+            name: "LlamaSwift",
+            targets: ["LlamaSwift"]
+        )
+    ],
+    targets: [
+        .binaryTarget(
+            name: "llama",
+            path: "Frameworks/llama.xcframework"
+        ),
+        .target(
+            name: "LlamaSwift",
+            dependencies: ["llama"],
+            path: "Sources/LlamaSwift"
+        )
+    ]
+)
